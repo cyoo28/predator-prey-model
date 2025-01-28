@@ -1,1 +1,10 @@
-# predator-prey-model
+# Predator-Prey Model
+This project is a multi-agent reinforment learning model for the predator-prey problem. This was completed as part of an job interview in March 2023.
+
+## Problem Statement
+Predator-prey problems represent cooperative-competitive reinforcement learning problems in which the predators must cooperate with each other in order to capture the prey that are trying to escape. For this project, the world is treated as a grid-like environment with no obstacles. The prey exhibit a basic behavior and can go north, south, east, west, or remain in place. The behavior is chosen each turn randomly, all options having equal probability of occuring. The predators exhibit a more complex behavior and can north, south, east, west, northeast, northwest, southeast, southwest, or remain in place. Unlike the basic prey behavior, the predator behavior is chosen each turn based on whichever choice will get it closer to the prey. When the predator reaches the same gridspace as a prey, this is considered an attack. However, for the attack to be successful, at least 2 predators must attack the same prey within the same turn. If the attack is successful, then the prey is removed from the environment. Otherwise, if only 1 predator attacks a prey, the attack is unsuccessful and the predator is removed from the environment. Each predator can only choose their own action and do not know what actions the other predators will take. Therefore, the predators must learn a cooperative behavior that allows them to coordinate their attacks without explicit communication.
+
+## Results
+The code for this problem can be reviewed in the code subdirectory. The results of this project are outlined in "Predator-Prey Model Review.pdf". The questions that were answered in section 3 are as follows:
+1. Review 2 multi-agent reinforcement learning algorithms that have been used to solve the predator-prey problem. Review both of them and explain how they compare to one another.
+2. What challenges do you foresee if predators are trained using reinforcement learning techniques.
